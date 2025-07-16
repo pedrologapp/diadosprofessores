@@ -802,10 +802,6 @@
                     <p>Preencha o formulário para confirmar seu interesse na viagem</p>
                 </div>
 
-                <div class="alert">
-                    <strong>⚠️ Importante:</strong> Este é apenas um formulário de interesse inicial. A confirmação definitiva será feita posteriormente.
-                </div>
-
                 <form id="interesseForm">
                     <div class="form-group">
                         <label class="form-label" for="nomeColaborador">Nome Completo do Colaborador *</label>
@@ -815,18 +811,6 @@
                             name="nomeColaborador" 
                             class="form-input" 
                             placeholder="Digite seu nome completo"
-                            required
-                        >
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="email">E-mail para contato *</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            class="form-input" 
-                            placeholder="seu.email@exemplo.com"
                             required
                         >
                     </div>
@@ -876,18 +860,6 @@
                                 </select>
                             </div>
 
-                            <div class="form-group">
-                                <label class="form-label" for="nomeAcompanhantes">
-                                    Nome e parentesco dos acompanhantes
-                                </label>
-                                <textarea 
-                                    id="nomeAcompanhantes" 
-                                    name="nomeAcompanhantes" 
-                                    class="form-input" 
-                                    rows="3"
-                                    placeholder="Ex: Maria Silva (esposa), João Silva (filho - 12 anos)..."
-                                ></textarea>
-                            </div>
                         </div>
                     </div>
 
@@ -969,11 +941,9 @@
             // Collect form data
             const formData = {
                 nomeColaborador: document.getElementById('nomeColaborador').value,
-                email: document.getElementById('email').value,
                 telefone: document.getElementById('telefone').value,
                 levarAcompanhante: document.getElementById('levarAcompanhante').checked,
                 quantosAcompanhantes: document.getElementById('quantosAcompanhantes').value || '0',
-                nomeAcompanhantes: document.getElementById('nomeAcompanhantes').value || '',
                 observacoes: document.getElementById('observacoes').value || '',
                 timestamp: new Date().toISOString(),
                 dataViagem: '03-05/10/2025',
